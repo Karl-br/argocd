@@ -1,6 +1,6 @@
 argo_namespace: argocd
 
-destination_server: 
+destination_server: https://kubernetes.default.svc
 
 targetRevision: main
 
