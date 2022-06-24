@@ -1,0 +1,14 @@
+argo_namespace: omnipf-tes1
+
+destination_server: 
+
+targetRevision: main
+
+repoURL: 
+
+project: default
+
+apps:
+    - name: api-auth
+      namespace: api-auth
+      helmfile: api-auth.yaml
