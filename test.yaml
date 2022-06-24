@@ -4,7 +4,7 @@ destination_server:
 
 targetRevision: main
 
-repoURL: 
+repoURL: https://github.com/Karl-br/ts0624.git
 
 project: default
 
