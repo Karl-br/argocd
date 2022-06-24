@@ -1,4 +1,4 @@
-argo_namespace: omnipf-tes1
+argo_namespace: argocd
 
 destination_server: 
 
