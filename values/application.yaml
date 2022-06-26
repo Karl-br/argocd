@@ -8,5 +8,5 @@ project: default
 
 apps:
     - name: api-auth
-      namespace: api-auth
+      namespace: 001
       helmfile: api-auth.yaml
