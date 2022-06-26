@@ -19,9 +19,3 @@ spec:
   destination:
     server: {{ $.Values.destination_server }}
     namespace: 001
-  {{- if .ignoreDifferences }}
-  ignoreDifferences:
-  {{- toYaml .ignoreDifferences | nindent 2 }}
-  {{- end }}
-{{- end }}
-
