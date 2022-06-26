@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-test
+  namespace: argocd-test
+spec:
+  project: {{ $.Values.project }}
+  source:
+    repoURL: {{ $.Values.repoURL }}
+    targetRevision: {{ $.Values.targetRevision }}
+    path: .
+    plugin:
+      name: helmfile
+      env:
+        - name: HELMFILE
+          value: {{ .helmfile }}
+        - name: ENV
+          value: {{ $.Values.helmfile_env }}
+  destination:
+    server: {{ $.Values.destination_server }}
+    namespace: 001
+  {{- if .ignoreDifferences }}
+  ignoreDifferences:
+  {{- toYaml .ignoreDifferences | nindent 2 }}
+  {{- end }}
+{{- end }}
+

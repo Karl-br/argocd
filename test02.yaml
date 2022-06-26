@@ -1,0 +1,8 @@
+releases:
+  - name: applications
+    namespace: 001
+    chart: charts/applications/
+    version: 0.0.1
+    atomic: false
+    values:
+      - values/test03.yaml
