@@ -4,7 +4,7 @@ metadata:
   name: argocd-test
   namespace: argocd-test
 spec:
-  project: {{ $.Values.project }}
+  project: default
   source:
     repoURL: {{ $.Values.repoURL }}
     targetRevision: {{ $.Values.targetRevision }}
